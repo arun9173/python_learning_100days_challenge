@@ -12,9 +12,14 @@ What is your name?Angela
 6
 */
 
-#practice code:
+#practice code1:
 
 name=input("What is your name? ")
 print(len(name))
+
+#practice code2:
+
+print(len(input("what is your name?")))
+
 
 
