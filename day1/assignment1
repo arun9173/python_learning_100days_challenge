@@ -3,8 +3,15 @@
 //The function is declared like this:
 //print('what to print') 
 
-code :
+practice code 1 :
 
 print("Day 1 - Python Print Function\n"
 "The function is declared like this:\n"
 "print('what to print')")
+
+
+practice code 2 :
+
+print("Day 1 - Python Print Function")
+print("The function is declared like this")
+print("print('what to print')")
