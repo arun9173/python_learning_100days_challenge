@@ -1,0 +1,20 @@
+>>> PRINT THIS 
+output should be:
+
+1. first it will ask question "What is your name?"
+2. then it will print input name.
+3. and last print the length of name. (e.g: arun=length-4 or angela=length-6)
+
+From here >>> It should be like this:-
+
+/*
+What is your name?Angela
+6
+*/
+
+#practice code:
+
+name=input("What is your name? ")
+print(len(name))
+
+
