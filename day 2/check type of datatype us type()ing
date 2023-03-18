@@ -1,0 +1,30 @@
+####################### For String #####################
+
+code:
+
+a="arun"
+print(type(a))
+
+OR
+
+a="1234"
+print(type(a))
+
+OUTPUT:
+<class 'str'>
+
+
+###################### FOR INTEGER ##########################
+
+code:
+
+a=1123
+print(type(a))
+
+OR
+
+print(type(12344))
+
+OUTPUT:
+<class 'int'>
+
