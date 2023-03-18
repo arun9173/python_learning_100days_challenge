@@ -1,0 +1,5 @@
+
+PRACTICE CODE:
+
+a=input("input anything(string/number):")
+print(len(a))
