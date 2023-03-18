@@ -1,0 +1,15 @@
+code:
+example 1:
+
+print(round(23.456,2))
+output:
+23.46
+
+example 2:
+
+print(round(2*3.81,2))
+output:
+7.62
+
+note:
+here 2 is values which comes after (.)point
