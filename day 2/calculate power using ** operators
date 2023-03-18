@@ -1,0 +1,16 @@
+# using ** operator 
+# we can calculate power of any number.
+
+examples:
+
+print(3**2)
+print(2**2)
+print(9**3)
+
+output:
+9
+4
+729
+
+
+
