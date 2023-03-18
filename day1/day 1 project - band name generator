@@ -11,7 +11,7 @@ Expectations:
 #5. Make sure the input cursor shows on a new line:
 
 
-Practice code:
+Practice code:-
 
 print("Welcome to the Band Name Ganerator. ")
 city=input("What's name of the city you grew up in?\n")
