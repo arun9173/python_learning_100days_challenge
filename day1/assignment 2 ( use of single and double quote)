@@ -1,6 +1,6 @@
 >>> PRINT THIS ( concatenation lecture) & [ USE OF:- single('') and double("") quote ]
 
-output should be:-
+output should be:
 /*
 Day 1 - String Manipulation
 String Concatenation is done with the "+" sign.
