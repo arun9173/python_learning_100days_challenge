@@ -1,1 +1,24 @@
+Instructions:-
+
+Write a program that adds the digits in a 2 digit number.
+e.g. if the input was 35,
+then the output should be 3 + 5 = 8
+
+Example Input:
+39
+Example Output:
+3 + 9 = 12
+
+Practice code:
+
+num=input("enter 2 digit number:")
+print(int(num[0])+int(num[1]))
+
+note:
+here i am doing 2 things.
+1.splitting string using index number.
+2.converting string into interger.
+
+
+
 
