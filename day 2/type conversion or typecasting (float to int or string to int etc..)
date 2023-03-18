@@ -1,1 +1,23 @@
+############### STRING TO FLOAT ##################
+
+code:
+print(type(123))
+print(type("100.6")
+print(123+float("100.6"))
+
+note:
+here "100.6" is a string.
+
+output:
+223.6
+
+
+#################### integer to string #####################
+
+code :
+
+print(str(123)+str(456))
+
+output:
+123456
 
