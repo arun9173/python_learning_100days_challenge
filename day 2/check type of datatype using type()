@@ -28,3 +28,5 @@ print(type(12344))
 OUTPUT:
 <class 'int'>
 
+
+>>>> Same as for Float as well >>>>>>>>>>>>
