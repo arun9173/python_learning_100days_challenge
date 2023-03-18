@@ -1,0 +1,19 @@
+Example:
+
+score = 0 -------------> integer
+height = 1.8 ----------> float
+iswin = True ----------> Boolean
+######################################################################
+if we print like this:
+
+print("your score is:"+score)
+
+then we get error called [ typeError ------> not int to str ]
+#######################################################################
+note :-
+so, to print this variable values in one line in string format,
+we use f-string.
+#######################################################################
+LIKE THIS WAY :-
+
+print(f"your score is {score}, your height is {height}, your winnig is {iswin}")
