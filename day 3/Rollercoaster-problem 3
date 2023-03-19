@@ -1,0 +1,43 @@
+################################################# INSTRUCTIONS ###################################
+Rule 1:
+
+check height of the people.
+if height is greater or equal to 120cm - you can ride rollercoaster.
+if height is not 120cm or less than - you cannot ride rollercoaster.
+
+Rule 2:
+
+if height is eligible for rollercoaster.
+check the age of person.
+if age is under 12 - pay $5
+if age in between 12 & 18 - pay $7
+if age is over 18 - pay $12
+
+Rule 3:
+
+ if height is eligible for rollercoaster
+ then ask for "do you want take photo?"
+ if yes add $3 according to age and make bill.
+ if no print same bill.
+
+############################################### PRACTICE CODE ####################################
+
+print("Welcome to the rollercoaster ride!")
+height = float(input("enter your height: "))
+
+if height >= 120:
+  print("You can ride.")
+  age=int(input("what is your age: "))
+  if age < 12:
+    bill = 5
+  if age < 18:
+    bill = 7
+  if age > 18:
+    bill = 12
+  photo = input("Do you want to take photo? (y / n) ")
+  if photo == 'y':
+    bill = bill + 3
+
+  print(f"Your total bill is ${bill}")
+else:
+  print("You cannot ride.")
