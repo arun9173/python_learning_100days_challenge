@@ -1,0 +1,31 @@
+################################################# INSTRUCTIONS ###################################
+Rule 1:
+
+check height of the people.
+if height is greater or equal to 120cm - you can ride rollercoaster.
+if height is not 120cm or less than - you cannot ride rollercoaster.
+
+Rule 2:
+
+if height is eligible for rollercoaster.
+check the age of person.
+if age is under 12 - pay $5
+if age in between 12 & 18 - pay $7
+if age is over 18 - pay $12
+
+############################################### PRACTICE CODE ####################################
+
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+
+if height >= 120:
+  print("you can ride the rollercoaster")
+  age = int(input("What's your age : "))
+  if age < 12 :
+    print(" You have to pay $5")
+  elif age <= 18 :
+    print("You have to pay $7")
+  else:
+    print("You have to pay $12")
+else:
+  print("sorry, you cannot ride the rollercoaster.")
