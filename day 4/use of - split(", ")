@@ -1,0 +1,15 @@
+***using split(", ") we can generate list of item separated by ','.***
+eg.:-
+
+names_string = input("Give me everybody's names, separated by a comma.\n ")
+names = names_string.split(",")
+print(names)
+
+output sample:
+
+Give me everybody's names, separated by a comma.
+arun,neeraj,niruktt,kannu
+['arun','neeraj','niruktt','kannu']
+
+
+
