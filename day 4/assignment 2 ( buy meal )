@@ -23,6 +23,6 @@ names = names_string.split(",")
 # print(names)
 total_names = len(names)
 # print(total_names)
-random_num = random.randint(0,total_names)
+random_num = random.randint(0,total_names-1)
 
 print(f"{names[random_num]} is going to buy the meal today!")
