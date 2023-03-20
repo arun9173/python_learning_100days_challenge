@@ -1,0 +1,66 @@
+Game rules:-
+
+1.Rock beats scissors
+2.scissors beats paper
+3.paper beats rock.
+
+*must include or HINT:
+
+random() module
+list[]
+len()
+
+###################################### PRACTICE CODE ################################
+
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+player_choice = int(input("What do you choose? \n0 = rock, 1 = paper , 2 = scissors\n"))
+
+list = [rock,paper,scissors]
+print("Your choice:")
+print(list[player_choice])
+count = len(list)
+
+computer_choice = random.randint(0,count-1)
+print("computer choice:")
+print(list[computer_choice])
+
+if player_choice == 0 and computer_choice == 2:
+  print("YOU WIN!!")
+elif player_choice == 1 and computer_choice == 0:
+  print("YOU WIN!!")
+elif player_choice == 2 and computer_choice == 1:
+  print("YOU WIN!!")
+elif player_choice == computer_choice:
+  print("MATCH TIE.")
+else:
+  print("YOU LOSE")
+  
