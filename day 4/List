@@ -1,0 +1,41 @@
+########################## How to make list ##############################3
+
+syntax:
+list[content1,content2,content3.....]
+
+eg.
+
+animal = ["Lion","Monkey","Elephant","Tiger"] 
+print(animal)
+
+output:
+['Lion','Monkey','Elephant','Tiger']
+
+########################## list index ##############################
+
+***positive index start from = 0.****
+
+print(animal[1])
+
+output:
+Monkey
+
+>>>if we do 2d index - [0][1] - means print 0th index value and its 1th index alphabet
+eg.
+print(animal[0][1])
+output:
+i          # means [0] index in list is "Lion" (above you can see list) and its [1] index is 'i' >>>>here you can see ( L-[0],i-[1],o-[2],n-[3] )
+
+########################## NOTE :- ################################3
+
+****Negative index start from = -1.****
+
+if we do this , it print list from last.
+
+eg.
+
+animal = ["Lion","Monkey","Elephant","Tiger"]
+print(animal[-1])
+
+output:
+Tiger
