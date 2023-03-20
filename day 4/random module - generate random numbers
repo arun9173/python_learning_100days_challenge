@@ -35,7 +35,7 @@ we can use this way:-
 eg.
 import random
 num = random.uniform(0.0,5.0)
-print(round(num,3))
+print(round(num,3)) // 3 mean after decimal(.000) three number can only print
 
 
 
