@@ -1,0 +1,20 @@
+Nested List - * lis in a list *
+*suppose we have two list:-
+
+vowels= ['a','e','i','o','u']
+digit=[10,11,12,13,14,15]
+
+* put these list in another list given below,
+
+list_of_vowels_and_digit[]
+
+eg:-
+vowels= ['a','e','i','o','u']  #list1
+digit=[10,11,12,13,14,15]  #list2
+
+list_of_vowels_and_digit = [vowels,digit]    #list3 = combination of vowels and digit
+
+print(list_of_vowels_and_digit)
+
+output:
+[['a','e','i','o','u'],['10','11','12','13','14','15']]
