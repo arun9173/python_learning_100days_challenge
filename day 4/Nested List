@@ -18,3 +18,15 @@ print(list_of_vowels_and_digit)
 
 output:
 [['a','e','i','o','u'],['10','11','12','13','14','15']]
+
+
+NOTE :- 2d index in NESTED LIST
+
+vowels= ['a','e','i','o','u']
+digit=[10,11,12,13,1,4,15]
+
+list_of_vowels_and_digit = [vowels,digit] 
+print(list_of_vowels_and_digit[1][1])
+
+output:
+11
