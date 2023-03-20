@@ -1,0 +1,26 @@
+##################################### INSTRUCTION ##############################
+
+you should generate a random number,
+either 0 or 1.
+Then use that number to print out " Heads" or "Tails".
+
+e.g. 1 means Heads 0 means Tails
+
+####################################### EXAMPLES ###############################
+
+Example Output
+Heads
+or
+
+Tails
+
+################################## PRACTICE CODE ###############################
+
+import random
+
+toss = random.randint(0,1)
+
+if toss == 0:
+  print("Tails")
+else:
+  print("Heads")
