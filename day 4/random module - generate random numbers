@@ -1,0 +1,42 @@
+############################ FOR INTEGER ##############################
+
+import random
+
+num = random.randint(1,20) # random.randint(start,end)
+print(num)
+
+########################### FOR FLOAT NUMBER #########################
+
+import random
+
+num = random.random() # here we can put start and end point [ default rand 0-1 ]
+print(num)
+#########################################################################
+
+### FIRST METHOD ### IF WE WANT TO INCREASE RANGE WE CAN MULTIPLE random() with number.
+
+eg.
+random.random() * 5
+now,number will come between 0-5 in decimal form.
+
+####################### OR ##################################################
+### SECOND METHOD ### USE - random.uniform(start,end) method.
+
+import random
+num = random.uniform(0.0,5.0) # here numbers come in range 0-5 in decimal
+pritn(num)
+
+#################################################################################
+NOTE :-
+
+if we want round floating digits.
+we can use this way:-
+
+eg.
+import random
+num = random.uniform(0.0,5.0)
+print(round(num,3))
+
+
+
+
