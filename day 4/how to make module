@@ -1,0 +1,12 @@
+################################ STEPS FOR UNDERSTANDING WORKING OF MODULE #################################
+
+STEP 1 : create file1.py file.
+STEP 2 : create file2.py file.
+STEP 3 : write only , result = 3 + 4 in file2.py
+STEP 4 : in file1.py, do this to use file2 module.
+
+import file2
+print(file2.result)
+
+output:
+7
