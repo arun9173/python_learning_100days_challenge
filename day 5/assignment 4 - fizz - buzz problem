@@ -1,0 +1,75 @@
+################################## INSTRUCTION ##################################
+
+print number 1 to 100.
+
+Rules:-
+1. print number 1 to 100.
+2. but if number divisible by 3.  print "Fizz" instead of number.
+3. if number divisible by 5. print "Buzz" instead of number.
+4. if number divisible by both 3 & 5 print "FizzBuzz" instead of number.
+
+############################### EXAMPLE OUTPUT ######################################
+
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+
+################################## PRACTICE CODE #######################################
+
+for num in range(1,101):
+  if ((num % 3 == 0) and (num % 5 == 0)):
+    print("FizzBuzz")
+  elif num % 3 == 0:
+    print("Fizz")
+  elif num % 5 == 0:
+    print("Buzz")
+  else:
+    print(num)
+    
+############################# IMPORTANT NOTE TO REMEMBER ##################################
+if you are trying this method:-
+
+for num in range(1,16):
+  if num % 3 == 0:
+    print("Fizz")
+  elif num % 5 == 0:
+    print("Buzz")
+  elif ((num % 3 == 0) and (num % 5 == 0)):
+    print("FizzBuzz")
+  else:
+    print(num)
+    
+######################### the output it generate is that : ###################################
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+Fizz *** why fizz here because of this first line :  if num % 3 == 0 :- when this line executed first then other elif statement not checked.
+                                                       print("Fizz")
+                                                       
+                                                       and it prints "Fizz" not "FizzBuzz".
+                                                       
+
+ 
