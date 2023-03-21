@@ -1,0 +1,16 @@
+############################### for-loop in list ################################33333
+eg:
+
+list = ['arun','9173','neeraj','05534','niruktt','83883']
+for i in list:
+  print(i)
+  
+output:
+
+arun
+9173
+neeraj
+05534
+niruktt
+83883
+ 
