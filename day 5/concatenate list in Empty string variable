@@ -1,0 +1,16 @@
+Given :- 
+
+mylist = ["hello","what"]
+fillme = ""
+
+Expected output:
+hellowhat
+
+################### PRACTICE CODE ##########################33
+
+mylist = ["hello","what"]
+fill = ""
+for i in range(0,len(mylist)):
+    fill += mylist[i]
+
+print(fill)
