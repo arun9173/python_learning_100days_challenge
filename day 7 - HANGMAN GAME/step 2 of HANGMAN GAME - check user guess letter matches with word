@@ -1,0 +1,28 @@
+########################### PRACTICE CODE ##############################33
+
+import random
+word_list = ["aardvark", "baboon", "camel"]
+
+rand_num = random.randint(0,len(word_list)-1)
+chosen_word = word_list[rand_num]
+print(chosen_word)
+
+guess = input("Guess a letter : ")
+lower_guess = guess[0].lower() #Always takes only first letter if someone write a word
+print(lower_guess)
+
+############### First method to check ###########################
+
+for i in range (0, len(chosen_word)):
+  if lower_guess[0] == chosen_word[i]:
+    print("yes!")
+  else:
+    print("Ooops..")
+    
+############### or Second method to check ############################
+
+for letter in chosen_word:
+  if letter == lower_guess:
+    print("right")
+  else:
+    print("wrong")
