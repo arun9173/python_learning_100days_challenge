@@ -1,0 +1,5 @@
+##################### PRACTICE CODE ################################333
+
+guess = input("Guess a letter : ")
+lower_guess = guess.lower()
+print(lower_guess)
