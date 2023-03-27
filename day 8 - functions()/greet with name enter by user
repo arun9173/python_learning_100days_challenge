@@ -1,0 +1,15 @@
+########################### INSTRUCTIONS ############################
+
+1. make greet(user_name) function with argument enter by user.
+2. print "hello user_name".
+3. print " how do you do user_name".
+
+########################### PRACTICE CODE ##########################
+
+name = input("enter your name : ")
+
+def greet(name):
+  print(f"hello! {name}")
+  print(f"how do you do? {name}")
+
+greet(name)
