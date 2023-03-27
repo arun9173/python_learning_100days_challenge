@@ -1,0 +1,24 @@
+suppose function:
+
+############## PARAMETER ##################
+def display(something):  
+  # do something........
+  # print this ............
+  
+Note :
+here "something" is a variable name and also called "Parameter".
+
+
+################ ARGUMENT ################
+
+def my_func(num):
+  print(num)
+  
+my_func(123) # here 123 is a actual value also called "Argument".
+
+##########################################################################
+summary :
+
+1.Parament is the variable name.
+2.Argument is the actual value.
+  
