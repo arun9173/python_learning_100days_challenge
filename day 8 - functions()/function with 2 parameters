@@ -1,0 +1,8 @@
+name = input("enter your name : ")
+location = input("enter your location : ")
+
+def greet(name, location):
+  print(f"hello! {name}")
+  print(f"And you live in {location}")
+
+greet(name, location)
