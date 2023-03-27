@@ -1,0 +1,58 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+            ]
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+new = ""
+def encrypt(user_text, shift_num):
+    new_text = ""
+
+    for letter in user_text:
+        position = alphabet.index(letter)
+        new_position = position + shift_num
+        new_letter = alphabet[new_position]
+        new_text += new_letter
+
+    print("The encoded text is : "+new_text)
+
+
+def decode(user_text,shift_num):
+    new_text = ""
+    for letter in user_text:
+        position = alphabet.index(letter)
+        dec_pos = position - shift_num
+        dec_letter = alphabet[dec_pos]
+        new_text += dec_letter
+    print("The decoded text is : " + new_text)
+
+
+if direction == "encode":
+    encrypt(user_text=text, shift_num=shift)
+else:
+    decode(user_text=text, shift_num=shift )
+    
+    
+    
+ ################################################ ENCODE OUTPUT ##############################
+ 
+Type 'encode' to encrypt, type 'decode' to decrypt:
+encode
+Type your message:
+ZEbra
+Type the shift number:
+3
+The encoded text is : cheud
+
+ ################################################ DECODE OUTPUT ##############################
+ 
+Type 'encode' to encrypt, type 'decode' to decrypt:
+decode
+Type your message:
+cheud
+Type the shift number:
+3
+The decoded text is : zebra
