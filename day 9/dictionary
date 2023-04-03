@@ -8,3 +8,5 @@ print(roll["2"])
 
 #note:
 #dictionary ["key:"value""]
+
+In dictionary all key value-pair are in STRING formate.
