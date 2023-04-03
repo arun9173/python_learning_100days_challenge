@@ -1,1 +1,10 @@
+roll ={"01":"Arun",
+       "2":"monu",
+       "3":"sonu",
+       "4":"tonu",
+}
 
+print(roll["2"])
+
+#note:
+#dictionary ["key:"value""]
