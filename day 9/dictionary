@@ -1,3 +1,5 @@
+
+----------------------------------- when key in string formate ----------------------------------------------
 roll ={"01":"Arun",
        "2":"monu",
        "3":"sonu",
@@ -5,8 +7,18 @@ roll ={"01":"Arun",
 }
 
 print(roll["2"])
+----------------------------------------- when key in integer formate ---------------------------------------
+roll ={10:"Arun",
+       "2":"monu",
+       "3":"sonu",
+       "4":"tonu",
+}
+
+print(roll[10])
+
+-----------------------------------------------------  note --------------------------------------------------
 
 #note:
 #dictionary ["key:"value""]
 
-In dictionary all key value-pair are in STRING formate.
+In dictionary all key may in STRING/integer formate.
