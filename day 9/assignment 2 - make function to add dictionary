@@ -1,0 +1,39 @@
+---------------------------------------------- INSTRUCTION -----------------------------------
+
+Write a function that will work with the following line of code on line 21 to add the entry for Russia to the travel_log.
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+
+--------------------------------------------- CODE --------------------------------------------
+
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+#FUNCTION CODE
+
+def add_new_country(countr,visit,city):
+    dict ={"country":countr,
+           "visits" :visit,
+           "cities":city
+    }
+    travel_log.append(dict)
+    
+#end here
+
+
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
+
+------------------------------------------------ OUTPUT ---------------------------------------------------
+
+[{'country': 'France', 'visits': 12, 'cities': ['Paris', 'Lille', 'Dijon']}, {'country': 'Germany', 'visits': 5, 'cities': ['Berlin', 'Hamburg', 'Stuttgart']}, {'country': 'Russia', 'visits': 2, 'cities': ['Moscow', 'Saint Petersburg']}]
