@@ -1,0 +1,19 @@
+bidders={}
+num=1
+while not num ==0:
+    ask = input("do yo wanna bidding (y/n) ? ")
+    if ask == "y":
+        name = input("what is your name? ")
+        money =int(input("what is your price? "))
+        bidders[name]=money
+    else:
+        num -=1
+cost=0
+name=""
+for price in bidders:
+    if cost < bidders[price]:
+        cost = bidders[price]
+        name = price
+
+
+print(f"{name} has highest bid of price : {cost}")
