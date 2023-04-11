@@ -1,0 +1,18 @@
+list = [
+    {"key1":{"1","A","3"},
+     "key2":["no","yes"],},
+    {
+        "ak1":"valu1",
+        "ak2":2,
+    }
+]
+
+print(f"first method: {list[0]}")
+print(f"second: {list[1]}")
+print(f"third: {list}")
+
+----------------------------------------------- output ---------------------------------------
+
+first method: {'key1': {'A', '1', '3'}, 'key2': ['no', 'yes']}
+second: {'ak1': 'valu1', 'ak2': 2}
+third: [{'key1': {'A', '1', '3'}, 'key2': ['no', 'yes']}, {'ak1': 'valu1', 'ak2': 2}]
