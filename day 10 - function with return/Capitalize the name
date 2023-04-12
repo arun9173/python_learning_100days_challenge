@@ -1,0 +1,23 @@
+------------------------------ INSTRUCTION -------------------------------
+steps:
+1. make function with two parameter f_name and l_name (first name and last name).
+2. now, convert both first letter in capital .
+3. print result.
+
+--------------------------- CODE --------------------------------
+
+def capital(f_name,l_name):
+    first = f_name.capitalize()
+    last = l_name.capitalize()
+    print(first+" "+last)
+
+
+f_name = input("enter your first name: ")
+l_name = input("enter your last name: ")
+capital(f_name,l_name)
+
+---------------------------- OUTPUT -----------------------------------
+
+enter your first name: ARun
+enter your last name: kUmAR
+Arun Kumar
