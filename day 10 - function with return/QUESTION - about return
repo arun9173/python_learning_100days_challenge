@@ -1,0 +1,14 @@
+What will be printed in the console after running the following code?
+
+def my_function(a):
+    if a < 40:
+        return # because of this
+        print("Terrible")
+    if a < 80:
+        return "Pass"
+    else:
+        return "Great"
+print(my_function(25))
+
+---------------------------------- OUTPUT -------------------------------
+None
