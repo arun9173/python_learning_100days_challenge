@@ -21,3 +21,7 @@ capital(f_name,l_name)
 enter your first name: ARun
 enter your last name: kUmAR
 Arun Kumar
+
+---------------------- NOTE ---------------------
+
+string_variabe.title() - can be used for this also.
