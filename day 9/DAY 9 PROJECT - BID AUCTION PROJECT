@@ -1,0 +1,63 @@
+--------------------------------- INSTRUCTION -------------------------------------------------------
+STEPS TO FOLLOW :
+
+1. import bid auction image.
+2. welcome persons in bid auction.
+3. ask bidders for continue in bidding.
+4. if yes - add their (name and cost) in BIDDERS dictionary.
+5. if no - print winner name and cost.
+
+--------------------------------- CODE -----------------------------------------------------------------
+
+import bidauction
+print(bidauction.image)
+print("WELCOME TO BID AUCTION")
+
+stop=1
+bidders = {}
+
+while not stop == 0:
+    ask = input("Do you wanna continue? (y/n): ")
+    if ask == "y":
+        name = input("What is your name sir/madam? ")
+        price = int(input("What is your bid? $"))
+        bidders[name] = price
+    else:
+        stop -= 1
+
+
+winner = ''
+bidder_cost = 0
+for name in bidders:
+    if bidders[name] > bidder_cost:
+        bidder_cost = bidders[name]
+        winner = name
+    else:
+        pass
+
+print(f"{winner} is winner with price : ${bidder_cost}")
+
+-------------------------------------------------------- OUTPUT -------------------------------------------------
+
+
+██████╗░██╗██████╗░  ░█████╗░██╗░░░██╗░█████╗░████████╗██╗░█████╗░███╗░░██╗
+██╔══██╗██║██╔══██╗  ██╔══██╗██║░░░██║██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║
+██████╦╝██║██║░░██║  ███████║██║░░░██║██║░░╚═╝░░░██║░░░██║██║░░██║██╔██╗██║
+██╔══██╗██║██║░░██║  ██╔══██║██║░░░██║██║░░██╗░░░██║░░░██║██║░░██║██║╚████║
+██████╦╝██║██████╔╝  ██║░░██║╚██████╔╝╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║
+╚═════╝░╚═╝╚═════╝░  ╚═╝░░╚═╝░╚═════╝░░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝
+
+WELCOME TO BID AUCTION
+Do you wanna continue? (y/n): y
+What is your name sir/madam? arun
+What is your bid? $890000
+Do you wanna continue? (y/n): y
+What is your name sir/madam? pooja
+What is your bid? $34000
+Do you wanna continue? (y/n): y
+What is your name sir/madam? monu
+What is your bid? $900000000000
+Do you wanna continue? (y/n): n
+monu is winner with price : $900000000000
+
+
