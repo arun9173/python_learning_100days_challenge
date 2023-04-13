@@ -1,0 +1,18 @@
+def add(a,b):
+    return a+b
+
+dict={
+    "+":add,
+}
+
+sign = input("press '+' sign: ")
+
+if sign == "+":
+    a = int(input("first number: "))
+    b = int(input("second number:"))
+    function_call = dict[sign]
+    answer = function_call(a,b)
+    print(f"result: {answer}")
+else:
+    print("not right choice!")
+
