@@ -21,4 +21,4 @@ print(roll[10])
 #note:
 #dictionary ["key:"value""]
 
-In dictionary all key may in STRING/integer formate.
+
