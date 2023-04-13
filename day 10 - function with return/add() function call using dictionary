@@ -15,4 +15,11 @@ if sign == "+":
     print(f"result: {answer}")
 else:
     print("not right choice!")
+    
+--------------------------------------------------- OUTPUT -------------------------------------------
+
+press '+' sign: +
+first number: 45
+second number:10
+result: 55
 
