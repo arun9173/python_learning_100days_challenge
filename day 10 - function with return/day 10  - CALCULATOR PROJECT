@@ -1,0 +1,118 @@
+------------------------------------- INSTRUCTION ------------------------------------------
+FOLLOW RULES :-
+
+1. print calculator logo.
+2. make functions of (add,subtract,divide,multiply) and return result.
+2. ask first number.
+3. show calculator operations(+,-,*,/) using - dictionary and call functions according symbol.
+eg. dictionary be like-
+
+operation = {
+"+" : add,
+"-" : subtract,
+and so on....
+}
+
+4. ask second number.
+5. show result.
+6.make while loop for continue in calculator to ask yes or no.
+7. if 'yes' - ask next operation again and next number and show result.
+8. if 'no' - close loop and start step 2 again.
+
+------------------------------------------ CODE ------------------------------------------------
+
+import image
+
+def add(a,b):
+    return a+b
+
+def subtract(a,b):
+    return a-b
+
+def multiply(a,b):
+    return a*b
+
+def divide(a,b):
+    return a/b
+
+print(image.logo)
+
+operations = {
+    "+" : add,
+    "-" : subtract,
+    "*" : multiply,
+    "/" : divide,
+}
+
+def calculator():
+    a = float(input("first number : "))
+
+    print("operations are :")
+    for sign in operations:
+        print(sign)
+
+    symbol = input("choose operation for calculation : ")
+    b = float(input("second number : "))
+    function_call = operations[symbol]
+
+    result = function_call(a,b)
+
+    print(f"{a} {symbol} {b} = {round(result,5)}")
+
+    flag = 1
+
+    while not flag == 0:
+        ask = input("want to continue press - 'y' OR 'n' - to start again? (y/n) : ")
+        if ask == 'y':
+            next_sign = input("choose your next operation from above: ")
+            next_number = float(input("what's your next number: "))
+            function_call = operations[next_sign]
+            answer = function_call(result,next_number)
+            print(f"{result} {next_sign} {next_number} = {round(answer,5)}")
+        else:
+            flag -= 1
+            calculator()
+
+
+calculator()
+
+--------------------------------------------------------- OUTPUT ----------------------------------------------------
+
+███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░█████████░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░█████████░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░███
+█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███
+█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░█████████░░▄▀░░░░░░░░░░█░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░░░░░▄▀░░█░░░░░░▄▀░░░░░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░░░▄▀░░███
+█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀░░████░░▄▀░░███
+█░░▄▀░░█████████░░▄▀░░░░░░▄▀░░█░░▄▀░░█████████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░░░░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░░░▄▀░░███
+█░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░█████████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███
+█░░▄▀░░█████████░░▄▀░░░░░░▄▀░░█░░▄▀░░█████████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░░░░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░░░███
+█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░█████████░░▄▀░░██░░▄▀░░█░░▄▀░░█████████░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░█████
+█░░▄▀░░░░░░░░░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░░░░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░░░░░█░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░░░░░█
+█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░█
+█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█████░░░░░░█████░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░░░█
+███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+first number : 23
+operations are :
++
+-
+*
+/
+choose operation for calculation : +
+second number : 43
+23.0 + 43.0 = 66.0
+want to continue press - 'y' OR 'n' - to start again? (y/n) : y
+choose your next operation from above: /
+what's your next number: 3
+66.0 / 3.0 = 22.0
+want to continue press - 'y' OR 'n' - to start again? (y/n) : n
+first number : 100
+operations are :
++
+-
+*
+/
+choose operation for calculation : *
+second number : 2
+100.0 * 2.0 = 200.0
+want to continue press - 'y' OR 'n' - to start again? (y/n) : 
