@@ -1,0 +1,119 @@
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+user_cards = []
+computer_card = [11, 11]
+
+def generate_user_card():
+    for card in range(2):
+        user_cards.append(random.choice(cards))
+    return user_cards
+
+def generate_computer_card():
+    for card in range(2):
+        computer_card.append(random.choice(cards))
+    return computer_card
+
+def another_card():
+    user_cards.append(random.choice(cards))
+    return user_cards
+
+def winner(user_sum,computer_sum):
+    if user_sum > computer_sum:
+        if user_sum <=21:
+            return "YOU WIN!!"
+        else:
+            return "Computer win!!"
+    elif user_sum == computer_sum:
+        return "TIE!!"
+    else:
+        return "Computer Win!!"
+
+
+def blackjack():
+    generate_user_card()
+    user_cards_sum = sum(user_cards)
+    # generate_computer_card()
+    computer_cards_sum = sum(computer_card)
+
+    print(f"your cards: {user_cards}, current score: {user_cards_sum} ")
+    print(f"computer first cards: {computer_card[0]}")
+
+    card_choice = input("type 'y' to get another card, type 'n' to pass: ")
+
+    if card_choice == 'y':
+        user_new_cards = another_card()
+        user_cards_sum = sum(user_new_cards)
+        if 11 in user_new_cards and user_cards_sum > 21:
+            user_cards.remove(11)
+            user_cards.append(1)
+        if 11 in computer_card and computer_cards_sum > 21 :
+            computer_card.remove(11)
+            computer_card.append(1)
+
+        user_cards_sum = sum(user_new_cards)
+        computer_cards_sum= sum(computer_card)
+        print(f"your final cards: {user_new_cards}, final score: {user_cards_sum} ")
+        print(f"computer final cards: {computer_card}, final score: {computer_cards_sum}")
+        print(winner(user_cards_sum,computer_cards_sum))
+    else:
+        if 11 in user_cards and user_cards_sum > 21:
+            user_cards.remove(11)
+            user_cards.append(1)
+        if 11 in computer_card and computer_cards_sum > 21 :
+            computer_card.remove(11)
+            computer_card.append(1)
+        user_cards_sum = sum(user_cards)
+        computer_cards_sum = sum(computer_card)
+        print(f"your final cards: {user_cards}, final score: {user_cards_sum} ")
+        print(f"computer final cards: {computer_card}, final score: {computer_cards_sum}")
+        print(winner(user_cards_sum, computer_cards_sum))
+
+flag = True
+while not flag == False:
+    ask = input("Do You Wanna play Blackjack (y/n): ")
+    if ask == 'y':
+        blackjack()
+    else:
+        flag = False
+    
+----------------------------------------- OUTPUT --------------------------------------------------------
+
+Do You Wanna play Blackjack (y/n): y
+your cards: [10, 8], current score: 18 
+computer first cards: 11
+type 'y' to get another card, type 'n' to pass: 
+your final cards: [10, 8], final score: 18 
+computer final cards: [11, 1], final score: 12
+YOU WIN!!
+Do You Wanna play Blackjack (y/n): 
+
+
+----------------------------------- note : bugs --------------------------
+
+1.new card deal only work for user not for computer.
+2.new card deal work only 1 time and shows result.
+3.same code most of time grabs lots of line.
+4.have to make different functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
