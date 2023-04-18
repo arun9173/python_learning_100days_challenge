@@ -6,7 +6,7 @@ def play():
     print("I'm thinking of a number between 1 to 100.")
     level = input("Choose difficulty level. Type 'easy' or 'hard': ")
     actual_number = random.randint(1, 100)
-    print(actual_number)
+    #print(actual_number)
     if level == 'easy':
         attempt = 10
     else:
