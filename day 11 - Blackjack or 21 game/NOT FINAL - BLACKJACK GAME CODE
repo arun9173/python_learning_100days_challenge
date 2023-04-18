@@ -1,0 +1,85 @@
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+user_card = []
+computer_card = []
+
+def cardflip():
+    for flip in range(2):
+        user_card.append(random.choice(cards))
+        computer_card.append(random.choice(cards))
+        
+def display():
+    print(f"Your cards: {user_card}, current score : {sum(user_card)}")
+    print(f"computer first card: {computer_card[0]}")
+
+def new_card_flip():
+    for flip in range(1):
+        user_card.append(random.choice(cards))
+        computer_card.append(random.choice(cards))
+
+def replace11():
+    if 11 in user_card and sum(user_card) > 21:
+        user_card.remove(11)
+        user_card.append(1)
+    if 11 in computer_card and sum(computer_card) > 21:
+        computer_card.remove(11)
+        computer_card.append(1)
+
+def check_winner():
+    print(f"Your final cards: {user_card}, current score : {sum(user_card)}")
+    print(f"computer final card: {computer_card},score: {sum(computer_card)}")
+    if sum(user_card) > sum(computer_card):
+        if sum(user_card) <= 21:
+            print("YOU WIN!")
+        else:
+            print("You LOOSE!")
+    elif sum(user_card) == sum(computer_card):
+        print("TIE!")
+    elif sum(computer_card) > 21 and sum(user_card) <= 21:
+        print("YOU WIN!")
+    else:
+        print("YOU LOOSE!")
+
+def blackjack():
+    new_card = input("Do You Want Another Card type:(y/n)? : ")
+    if new_card == 'y':
+        new_card_flip()
+        replace11()
+        display()
+        blackjack()
+    else:
+        check_winner()
+
+flag = True
+while not flag == False:
+    ask = input("Do You wanna play BlackjackGame (y/n) ? : ")
+    if ask == 'y':
+        user_card = []
+        computer_card = []
+        cardflip()
+        display()
+        blackjack()
+    else:
+        print("Thanks for playing!")
+        flag = False
+
+--------------------------------------------------------- OUTPUT -------------------------------------------------
+
+Do You Want Another Card type:(y/n)? : y
+Your cards: [4, 10, 1, 1], current score : 16
+computer first card: 10
+Do You Want Another Card type:(y/n)? : y
+Your cards: [4, 10, 1, 1, 5], current score : 21
+computer first card: 10
+Do You Want Another Card type:(y/n)? : n
+Your final cards: [4, 10, 1, 1, 5], current score : 21
+computer final card: [10, 10, 4, 10, 6],score: 40
+YOU WIN!
+Do You wanna play BlackjackGame (y/n) ? : 
+
+
+------------------------------------------------ NOTE --------------------------------------------------------
+In this game computer part is week. 
+have to work on computer card.
+how many time computer have to get card to make 21 or less than 21
