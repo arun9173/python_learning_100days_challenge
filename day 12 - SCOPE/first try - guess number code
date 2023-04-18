@@ -1,0 +1,72 @@
+import random
+import image
+
+def play():
+    print(image.logo + "\nWelcome To Number Guessing Game!")
+    print("I'm thinking of a number between 1 to 100.")
+    level = input("Choose difficulty level. Type 'easy' or 'hard': ")
+    actual_number = random.randint(1, 100)
+    print(actual_number)
+    if level == 'easy':
+        attempt = 10
+    else:
+        attempt = 5
+    while not attempt == 0:
+        print(f"You have {attempt} attempts remaining to guess a number.")
+        guess_number = int(input("make a guess: "))
+        if guess_number > actual_number:
+            print("Too High!\nGuess Again.")
+            attempt -= 1
+
+        elif guess_number < actual_number:
+            print("Too Low!\nGuess Again.")
+            attempt -= 1
+        else:
+            print(f"You Have Guessed Correct!\nIt is number : {guess_number}")
+            return
+
+flag = True
+while not flag == False:
+    ask = input("wanna play number guess game (y/n) : ")
+    if ask == 'y':
+        play()
+    else:
+        print("Thanks for playing!")
+        flag=False
+        
+-------------------------------------------------------------------------------------- OUTPUT -------------------------------------------------------
+
+wanna play number guess game (y/n) : y
+
+░██████╗░██╗░░░██╗███████╗░██████╗░██████╗  ███╗░░██╗██╗░░░██╗███╗░░░███╗██████╗░███████╗██████╗░
+██╔════╝░██║░░░██║██╔════╝██╔════╝██╔════╝  ████╗░██║██║░░░██║████╗░████║██╔══██╗██╔════╝██╔══██╗
+██║░░██╗░██║░░░██║█████╗░░╚█████╗░╚█████╗░  ██╔██╗██║██║░░░██║██╔████╔██║██████╦╝█████╗░░██████╔╝
+██║░░╚██╗██║░░░██║██╔══╝░░░╚═══██╗░╚═══██╗  ██║╚████║██║░░░██║██║╚██╔╝██║██╔══██╗██╔══╝░░██╔══██╗
+╚██████╔╝╚██████╔╝███████╗██████╔╝██████╔╝  ██║░╚███║╚██████╔╝██║░╚═╝░██║██████╦╝███████╗██║░░██║
+░╚═════╝░░╚═════╝░╚══════╝╚═════╝░╚═════╝░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝
+
+Welcome To Number Guessing Game!
+I'm thinking of a number between 1 to 100.
+Choose difficulty level. Type 'easy' or 'hard': hard
+You have 5 attempts remaining to guess a number.
+make a guess: 45
+Too High!
+Guess Again.
+You have 4 attempts remaining to guess a number.
+make a guess: 43
+Too High!
+Guess Again.
+You have 3 attempts remaining to guess a number.
+make a guess: 37
+Too High!
+Guess Again.
+You have 2 attempts remaining to guess a number.
+make a guess: 30
+Too High!
+Guess Again.
+You have 1 attempts remaining to guess a number.
+make a guess: 20
+Too High!
+Guess Again.
+wanna play number guess game (y/n) : n
+Thanks for playing!
