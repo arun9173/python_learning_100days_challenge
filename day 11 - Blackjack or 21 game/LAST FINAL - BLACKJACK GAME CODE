@@ -1,0 +1,91 @@
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+user_card = []
+computer_card = []
+
+def cardflip():
+    for flip in range(2):
+        user_card.append(random.choice(cards))
+        computer_card.append(random.choice(cards))
+        
+def display():
+    print(f"Your cards: {user_card}, current score : {sum(user_card)}")
+    print(f"computer first card: {computer_card[0]}")
+
+def new_card_flip():
+    for flip in range(1):
+        user_card.append(random.choice(cards))
+        if sum(computer_card) < 21:
+            computer_card.append(random.choice(cards))
+
+def replace11():
+    if 11 in user_card and sum(user_card) > 21:
+        user_card.remove(11)
+        user_card.append(1)
+    if 11 in computer_card and sum(computer_card) > 21:
+        computer_card.remove(11)
+        computer_card.append(1)
+
+def check_winner():
+    print(f"Your final cards: {user_card}, final score : {sum(user_card)}")
+    print(f"computer final card: {computer_card},final score: {sum(computer_card)}")
+    if sum(user_card) > sum(computer_card):
+        if sum(user_card) <= 21:
+            print("YOU WIN!")
+        else:
+            print("You LOOSE!")
+    elif sum(user_card) == sum(computer_card):
+        print("TIE!")
+    elif sum(computer_card) > 21 and sum(user_card) <= 21:
+        print("YOU WIN!")
+    else:
+        print("YOU LOOSE!")
+
+def blackjack():
+    new_card = input("Do You Want Another Card type:(y/n)? : ")
+    if new_card == 'y':
+        new_card_flip()
+        replace11()
+        display()
+        blackjack()
+    else:
+        check_winner()
+
+flag = True
+while not flag == False:
+    ask = input("Do You wanna play BlackjackGame (y/n) ? : ")
+    if ask == 'y':
+        user_card = []
+        computer_card = []
+        cardflip()
+        display()
+        blackjack()
+    else:
+        print("Thanks for playing!")
+        flag = False
+---------------------------------------------------------- OUTPUT -------------------------------------------
+
+Do You wanna play BlackjackGame (y/n) ? : y
+Your cards: [5, 9], current score : 14
+computer first card: 6
+Do You Want Another Card type:(y/n)? : y
+Your cards: [5, 9, 2], current score : 16
+computer first card: 6
+Do You Want Another Card type:(y/n)? : y
+Your cards: [5, 9, 2, 2], current score : 18
+computer first card: 6
+Do You Want Another Card type:(y/n)? : n
+Your final cards: [5, 9, 2, 2], final score : 18
+computer final card: [6, 10, 9],final score: 25
+YOU WIN!
+Do You wanna play BlackjackGame (y/n) ? : n
+Thanks for playing!
+
+--------------------------------------------- NOTE : my learning and what is not in this game --------------------------------------------
+
+Only user can choose for another card while playing.
+But if user don't want any card then there should be computer have to take decision to get another by its own.
+computer should not be dependent on user for getting another card.
+otherwise its good to play!!
+ENJOY!!
