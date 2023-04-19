@@ -1,0 +1,19 @@
+------------------------------------------------  if else bug ----------------------------------
+
+year = int(input("What's your year of birth?"))
+if year > 1980 and year < 1994:
+  print("You are a millenial.")
+elif year > 1994:
+  print("You are a Gen Z.")
+  
+ output:
+ 
+ #empty result if we input : 1980 or 1994
+ 
+ ------------------------------------------- Expected code -------------------------------------------
+ 
+ year = int(input("What's your year of birth?"))
+if year >= 1980 and year <= 1994:
+  print("You are a millenial.")
+elif year > 1994:
+  print("You are a Gen Z.")
