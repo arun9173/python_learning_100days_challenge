@@ -1,0 +1,20 @@
+----------------------------- in this code there are 3 Errors ---------------------------
+
+age = (input("How old are you?")
+if age > 18:
+print("You can drive at age {age}.")
+
+note :
+some error console tells you but some not
+
+--------------------------------- Expected code -------------------------------------------
+
+age = int(input("How old are you?"))
+if age > 18:
+  print(f"You can drive at age {age}.")
+  
+  
+solve Errors are :
+ 1. types conversion error str to int.
+ 2. indentation error.
+ 3. last invisible error - ["You can drive at age {age}."] to [f"You can drive at age {age}."] msg error.[ age not display ].
