@@ -1,0 +1,29 @@
+------------------------------------- list bug -----------------------------------------
+from random import randint
+dice_imgs = ["𝟭", "𝟮", "𝟯", "𝟰", "𝟱 ", "𝟲"]
+dice_num = randint(1, 6)
+print(dice_imgs[dice_num])
+
+output:
+sometime numbers comes between 1 to 6
+
+OR ERROR :-
+
+Traceback (most recent call last):
+  File "C:\Users\arun9173\PycharmProjects\pythonProject\guess_number.py", line 4, in <module>
+    print(dice_imgs[dice_num])
+IndexError: list index out of range
+
+Note:
+error is, list start from 0 .
+but randint(1, 6) it start from 1 and end to 6.
+-------------------------------------- EXPECTED OUTPUT --------------------------------
+
+from random import randint
+dice_imgs = ["𝟭", "𝟮", "𝟯", "𝟰", "𝟱 ", "𝟲"]
+dice_num = randint(0, 5)
+print(dice_imgs[dice_num])
+
+output :
+
+any number b/w 1 to 6
