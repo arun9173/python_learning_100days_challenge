@@ -1,0 +1,26 @@
+
+------------------------------------- how to use variable to collect function data ----------------------------------
+from  game_data import data
+
+print(logo)
+
+def compare():
+    rand_data = random.choice(data)
+    return rand_data
+
+rand_data = compare() // data comes here in rand_data variable , now rand_data is dictionary type variable
+
+print(f"compare A : {rand_data['name']}, {rand_data['description']}, from {rand_data['country']}")
+
+------------------------ output --------------------
+
+  / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : NASA, Space agency, from United States
