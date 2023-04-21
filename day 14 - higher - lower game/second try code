@@ -1,0 +1,67 @@
+import random
+from image import logo,vs
+from  game_data import data
+
+
+count = 0
+
+def compare():
+    rand_data = random.choice(data)
+    return rand_data
+
+def display():
+    print(logo)
+    data_A = compare()
+    print(f"compare A : {data_A['name']}, {data_A['description']}, from {data_A['country']}")
+    print(vs)
+    data_B =  compare()
+    print(f"Against B : {data_B['name']}, {data_B['description']}, from {data_B['country']}")
+    print(f"a:{data_A['follower_count']}, b:{data_B['follower_count']}")
+    answer = input("Who has more followers (A/B)? : ").lower()
+    check(data_A,data_B,answer)
+
+def check(personA,personB,answer):
+    followerA = personA['follower_count']
+    followerB = personB['follower_count']
+    max_Follower = max(followerB,followerA)
+    flag = ""
+    # print(f"max ={max_Follower}")
+    print(f"a:{followerA}, b:{followerB}")
+    if max_Follower == followerA:
+        flag = 'a'
+    else:
+        flag = 'b'
+    result (flag, answer)
+
+def result(flag, asnwer):
+    global count
+    temp = False
+    if asnwer == flag:
+        print("winner")
+        count += 1
+    else:
+        print("loose")
+        # ask_again(temp)
+    print (f"your score is : {count}")
+    display()
+
+
+
+
+flag = True
+while not flag == False:
+    ask = input("type 'y' to play or type 'n' to quite: ").lower()
+    if ask == 'y':
+
+        display()
+    else:
+        flag = False
+------------------------------------------------------------------------------------
+
+note :
+ code is not perfect yet trying to make it more less loc and easily to understand.
+ again clear screen not working ...why...why...why..why..why...this is happenning......
+ 
+ use of functions is waste not using function proper.
+ 
+ this try is garbage.
