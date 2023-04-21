@@ -1,0 +1,77 @@
+import random
+
+from image import logo,vs
+from  game_data import data
+
+print(logo)
+
+def compare():
+    rand_data = random.choice(data)
+    return rand_data
+
+def display():
+    data_A = compare()
+    print(f"compare A : {data_A['name']}, {data_A['description']}, from {data_A['country']}")
+    print(vs)
+    data_B =  compare()
+    print(f"Against B : {data_B['name']}, {data_B['description']}, from {data_B['country']}")
+    answer = input("Who has more followers (A/B)? : ").lower()
+    check(data_A,data_B,answer)
+
+def check(personA,personB,answer):
+    followerA = personA['follower_count']
+    followerB = personB['follower_count']
+    max_Follower = max(followerB,followerA)
+    flag = ""
+    # print(f"max ={max_Follower}")
+    print(f"a:{followerA}, b:{followerB}")
+    if max_Follower == followerA:
+        flag = 'a'
+    else:
+        flag = 'b'
+    result (flag,answer)
+
+def result(flag,asnwer):
+    count = 0
+    if asnwer == flag:
+        print("winner")
+        count += 1
+    else:
+        print("loose")
+
+    score(count)
+
+def score(count):
+
+    print (f"your score is : {count}")
+
+
+display()
+
+
+----------------------------------- output ---------------------------
+
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Kourtney Kardashian, Reality TV personality, from United States
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Against B : Chris Brown, Musician, from United States
+Who has more followers (A/B)? : b
+a:90, b:64
+loose
+your score is : 0
