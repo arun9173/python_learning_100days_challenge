@@ -48,6 +48,12 @@ def score(count):
 
 display()
 
+-------------------------- NOTE ---------------------
+
+unresolved issues not in code yet:
+
+score is not perfect always comes 1.
+while loop not work proper
 
 ----------------------------------- output ---------------------------
 
