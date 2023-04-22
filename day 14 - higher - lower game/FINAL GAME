@@ -1,0 +1,249 @@
+import random
+from image import logo, vs
+from game_data import data
+
+def game():
+
+    score = 0
+    flag = True
+    while not flag == False:
+        personA = random_data()
+        personB = random_data()
+        display(personA,personB)
+        #print(f"A : {personA['follower_count']}, B: {personB['follower_count']}")
+        answer = input("Who has more followers, type(A/B) : ").lower()
+        result = check(personA, personB)
+        print(result)
+        if result == answer:
+            print("winner")
+            score += 1
+        elif result == 'tie':
+            print('tie')
+        else:
+            print(f"sorry you loose, your final score :{score}")
+            ask = input("wanna play more, type (y/n): ").lower()
+            flag = call(ask)
+
+
+def call(ask):
+    if ask == 'y':
+        return True
+    else:
+        return False
+
+def display(pa, pb):
+    print(logo)
+    print(f"compare A : {pa['name']}, a {pa['description']}, from {pa['country']}")
+    print(vs)
+    print(f"Againts B : {pb['name']}, a {pb['description']}, from {pb['country']}")
+
+
+def check(pa,pb):
+    followerA = pa['follower_count']
+    followerB = pb['follower_count']
+
+    if followerA > followerB:
+        return 'a'
+    elif followerA == followerB:
+        return 'tie'
+    else:
+        return 'b'
+
+def random_data():
+    rand_data = random.choice(data)
+    return rand_data
+
+game()
+
+----------------------------------------- Note : ----------------------------------------
+
+use clear screen for better visualization.
+
+------------------------------------------------- output ------------------------------------------------------------
+
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Priyanka Chopra Jonas, a Actress and musician, from India
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Shakira, a Musician, from Colombia
+Who has more followers, type(A/B) : a
+b
+sorry you loose, your final score :0
+wanna play more, type (y/n): y
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Justin Bieber, a Musician, from Canada
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Jennifer Lopez, a Musician and actress, from United States
+Who has more followers, type(A/B) : a
+a
+winner
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Real Madrid CF, a Football club, from Spain
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Kourtney Kardashian, a Reality TV personality, from United States
+Who has more followers, type(A/B) : b
+b
+winner
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Kylie Jenner, a Reality TV personality and businesswoman and Self-Made Billionaire, from United States
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Billie Eilish, a Musician, from United States
+Who has more followers, type(A/B) : a
+a
+winner
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : NASA, a Space agency, from United States
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : NASA, a Space agency, from United States
+Who has more followers, type(A/B) : a
+tie
+tie
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Shakira, a Musician, from Colombia
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Ronaldinho, a Footballer, from Brasil
+Who has more followers, type(A/B) : a
+a
+winner
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Emma Watson, a Actress, from United Kingdom
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Rihanna, a Musician and businesswoman, from Barbados
+Who has more followers, type(A/B) : b
+b
+winner
+
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+
+compare A : Cardi B, a Musician, from United States
+
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+
+Againts B : Gigi Hadid, a Model, from United States
+Who has more followers, type(A/B) : b
+a
+sorry you loose, your final score :5
+wanna play more, type (y/n): n
