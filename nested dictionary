@@ -23,3 +23,9 @@ coffee = {
         'cost': 80,
     },
 }
+
+# TODO : how to use nested dictionary values
+
+# print(coffee['Espresso'])
+# print(coffee['Espresso']['resources'])
+# print(coffee['Espresso']['resources']['water'])
