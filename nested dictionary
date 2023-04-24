@@ -1,0 +1,25 @@
+coffee = {
+    'Espresso': {
+        'resources': {
+            'water': 50,
+            'coffee': 180,
+        },
+        'cost': 40, },
+
+    'Latte': {
+        'resources': {
+            'water': 200,
+            'coffee': 24,
+            'milk': 150,
+        },
+        'cost': 60, },
+
+    'Cappuccino': {
+        'resources': {
+            'water': 250,
+            'coffee': 24,
+            'milk': 100,
+        },
+        'cost': 80,
+    },
+}
