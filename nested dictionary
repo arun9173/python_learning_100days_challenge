@@ -29,3 +29,10 @@ coffee = {
 # print(coffee['Espresso'])
 # print(coffee['Espresso']['resources'])
 # print(coffee['Espresso']['resources']['water'])
+
+--------------------- output ------------------------------------
+
+{'resources': {'water': 50, 'coffee': 180}, 'cost': 40}
+{'water': 50, 'coffee': 180}
+50
+
