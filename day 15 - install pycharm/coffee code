@@ -1,0 +1,71 @@
+from data import menu
+
+
+def make_coffee():
+    water = 300
+    milk = 200
+    coffee = 100
+    switch = 'on'
+    while not switch == 'off':
+        switch = input("type 'on' to turn on machine OR type 'off' turn off the machine: ")
+        if not switch == 'off':
+            print(coffee_menu())
+            ask_coffee = input("What would you like: ").capitalize()
+            choice = ask_coffee
+            if choice == 'Report':
+                print(f"water: {water}\nmilk: {milk}\ncoffee: {coffee}\n ")
+            else:
+                five_coins = int(input('How many Five coins : '))
+                ten_coins = int(input('How many Ten coins : '))
+                total_coins = (five_coins * 5) + (ten_coins * 10)
+                new_water = int(menu[choice]['resources']['water'])
+                new_milk = int(menu[choice]['resources']['milk'])
+                new_coffee = int(menu[choice]['resources']['coffee'])
+
+                if water >= new_water and milk >= new_milk and coffee >= new_coffee:
+                    if total_coins >= menu[choice]['cost']:
+                        if choice == 'Espresso' or choice == 'Latte' or choice == 'Cappuccino':
+                            left_money = calculate_price(choice, total_coins)
+                            print(f"Here is  ₹{left_money} in change")
+                            print(f"Here is your {choice} ˗ˏˋ☕ˎˊ˗ Enjoy!")
+                            water = water - int(menu[choice]['resources']['water'])
+                            milk = milk - int(menu[choice]['resources']['milk'])
+                            coffee = coffee - int(menu[choice]['resources']['coffee'])
+                    else:
+                        print("Not enough money to buy coffee.")
+                else:
+                    print("sorry there is not enough:")
+                    if water < new_water:
+                        print("water")
+                        if milk < new_milk:
+                            print("milk")
+                            if coffee < new_coffee:
+                                print("coffee")
+
+        else:
+            switch = 'off'
+
+
+def calculate_price(coffee_choice, total_money):
+    cost = menu[coffee_choice]['cost']
+    option = coffee_choice
+    left_money = 0
+
+    if option == "Espresso":
+        left_money = total_money - cost
+    elif option == "Latte":
+        left_money = total_money - cost
+    elif option == "Cappuccino":
+        left_money = total_money - cost
+    else:
+        print("Not enough money to buy!")
+
+    return left_money
+
+
+def coffee_menu():
+    return f"choose your coffee:\n1. espresso - ₹{menu['Espresso']['cost']}\n2. latte-  ₹{menu['Latte']['cost']}\n3. " \
+           f"cappuccino - ₹{menu['Cappuccino']['cost']}\n OR type 'report' to see resources.\n OR type 'off' to turn off machine.\n"
+
+
+make_coffee()
