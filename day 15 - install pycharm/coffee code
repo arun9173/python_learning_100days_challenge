@@ -69,3 +69,64 @@ def coffee_menu():
 
 
 make_coffee()
+
+
+
+----------------------------------------------- output ------------------------------------
+
+type 'on' to turn on machine OR type 'off' turn off the machine: on
+choose your coffee:
+1. espresso - ₹40
+2. latte-  ₹60
+3. cappuccino - ₹80
+OR type 'report' to see resources.
+OR type 'off' to turn off machine.
+
+What would you like: cappuccino
+How many Five coins : 10
+How many Ten coins : 4
+Here is  ₹10 in change
+Here is your Cappuccino ˗ˏˋ☕ˎˊ˗ Enjoy!
+type 'on' to turn on machine OR type 'off' turn off the machine: on
+choose your coffee:
+1. espresso - ₹40
+2. latte-  ₹60
+3. cappuccino - ₹80
+OR type 'report' to see resources.
+OR type 'off' to turn off machine.
+
+What would you like: report
+water: 50
+milk: 100
+coffee: 76
+ 
+type 'on' to turn on machine OR type 'off' turn off the machine: cappuccino
+choose your coffee:
+1. espresso - ₹40
+2. latte-  ₹60
+3. cappuccino - ₹80
+OR type 'report' to see resources.
+OR type 'off' to turn off machine.
+
+What would you like: cappuccino
+How many Five coins : 10
+How many Ten coins : 4
+sorry there is not enough:
+water
+type 'on' to turn on machine OR type 'off' turn off the machine: on
+choose your coffee:
+1. espresso - ₹40
+2. latte-  ₹60
+3. cappuccino - ₹80
+OR type 'report' to see resources.
+OR type 'off' to turn off machine.
+
+What would you like: latte
+How many Five coins : 10
+How many Ten coins : 2
+sorry there is not enough:
+water
+milk
+type 'on' to turn on machine OR type 'off' turn off the machine: off
+
+Process finished with exit code 0
